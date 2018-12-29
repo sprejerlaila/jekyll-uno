@@ -61,7 +61,7 @@ history_clean = history[history['msg']!=' <Media omitted>']
 
 At the end I've got a pretty dataframe that looks like this:
 
-![image-20181228115119940](/../images/image-20181228115119940.jpg)
+![image-20181228115119940](/jekyll-uno/images/image-20181228115119940.jpg)
 
 ### First, some statistics
 
