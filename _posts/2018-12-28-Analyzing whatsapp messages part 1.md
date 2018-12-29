@@ -3,6 +3,7 @@ title:  "Analyzing WhatsApp messages with Python (part 1)"
 date:   2018-12-28 15:04:23
 categories: [jekyll]
 tags: [jekyll]
+comments: true
 ---
 I'm one of those people who keeps *every* conversation they ever had on WhatsApp. I've never deleted a single one since 2014, when I got my first smartphone. That means, I've got in my WhatsApp history over 800k messages with my friends, coworkers, family and even old boyfriends. 
 
