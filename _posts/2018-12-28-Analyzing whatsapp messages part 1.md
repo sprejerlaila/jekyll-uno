@@ -61,7 +61,7 @@ history_clean = history[history['msg']!=' <Media omitted>']
 
 At the end I've got a pretty dataframe that looks like this:
 
-![image-20181228115119940](/../images/image-20181228115119940.png)
+![image-20181228115119940](/../images/image-20181228115119940.jpg)
 
 ### First, some statistics
 
@@ -91,7 +91,7 @@ msg_lai.groupby(['date1']).count()['msg'].plot()
 
 
 
-![image-20181226192343210](/../images/image-20181226192343210.png)
+![image-20181226192343210](/../images/image-20181226192343210.jpg)
 
 I was very surprised when I saw this, because every time my texting drops I happen to start dating someone:see_no_evil: (That is, during 2014, and between 2016 and mid 2017).
 
@@ -101,7 +101,7 @@ I also found it quite funny to look at the length of my messages:
 history_clean.groupby(['date1'])['msg_len'].mean().plot()
 ```
 
-![image-20181226192937771](/../images/image-20181226192937771.png)
+![image-20181226192937771](/../images/image-20181226192937771.jpg)
 
 So of course I looked at that weird outlier and found this:
 
@@ -165,13 +165,13 @@ After struggling for a while with different python visualization tools that are 
 
 I was glad to see that apparently my life is full of love, happiness and surprise! 
 
-![image-20181226202738596](/../images/image-20181226202738596.png)
+![image-20181226202738596](/../images/image-20181226202738596.jpg)
 
 
 
 And I was amused to see how well my use of emojis represent different moments of my life:
 
-![image-20181226204141043](/../images/image-20181226204141043.png)
+![image-20181226204141043](/../images/image-20181226204141043.jpg)
 
 Feel free to take a look and download my [Public Tableau Dashboard](link), fill it with your own data and play around like me!  
 
