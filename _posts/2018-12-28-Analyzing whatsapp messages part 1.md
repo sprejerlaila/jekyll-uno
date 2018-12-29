@@ -161,7 +161,7 @@ def Count_Emojis(df):
     return pd.DataFrame(ordered)
 ```
 
-After struggling for a while with different python visualization tools that are not as compatible with emojis as I'd expect, I found that Tableau was pretty easygoing when it comes to emojis, so I exported the dataframe to a CSV and created a [Tableau Dashboard] (link al tableau) that you can download.
+After struggling for a while with different python visualization tools that are not as compatible with emojis as I'd expect, I found that Tableau was pretty easygoing when it comes to emojis, so I exported the dataframe to a CSV and created a [Tableau Dashboard](https://public.tableau.com/profile/laila4760#!/vizhome/Emojis_1/Emojis?publish=yes) that you can download.
 
 I was glad to see that apparently my life is full of love, happiness and surprise! 
 
