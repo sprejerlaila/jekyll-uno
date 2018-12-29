@@ -8,7 +8,7 @@ I'm one of those people who keeps *every* conversation they ever had on WhatsApp
 
 As soon as I learned NLP techniques, my first target was clear: go through my entire my whatsapp history to understand how my texting has evolved over the years, how my relationships differed from one another and why not, to see what else I could learn about myself! 
 
-You can find my full code and final presentation in my [GitHub repo] (https://github.com/sprejerlaila/whatsapp-me)
+You can find my full code and final presentation in my [GitHub repo](https://github.com/sprejerlaila/whatsapp-me)
 
 In this first part, I'm going to walk through importing conversations, handling emojis, and some general analysis on messages.
 
