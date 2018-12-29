@@ -17,7 +17,7 @@ In part 2, I'm going to jump right into my WhatsApp topic analysis using NLP tec
 
 ### Disclaimer 
 
-In this first approach and for simplicity, I decided to skip media files. 
+For simplicity, in this first approach I decided to skip media files. 
 
 ### Loading the message history
 
@@ -173,9 +173,9 @@ And I was amused to see how well my use of emojis represent different moments of
 
 ![image-20181226204141043](/jekyll-uno/images/image-20181226204141043.jpg)
 
-Feel free to take a look and download my [Public Tableau Dashboard](link), fill it with your own data and play around like me!  
+Feel free to take a look and download my [Public Tableau Dashboard](https://public.tableau.com/profile/laila4760#!/vizhome/Emojis_1/Emojis?publish=yes), fill it with your own data and play around like me!  
 
-All the code used here is fully available in my [Github](link), feel free to reach me with any questions at sprejerlaila@gmail.com or leave a comment! 
+All the code used here is fully available in my [Github](https://github.com/sprejerlaila/), feel free to reach me with any questions at sprejerlaila@gmail.com or leave a comment! 
 
 Also, take a look at [Part 2](link) for some WhatsApp topic modeling!
 
