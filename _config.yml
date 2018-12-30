@@ -1,7 +1,7 @@
 # Site settings
 title: Laila Sprejer
 description: 'Jekyll-Uno - a minimal, responsive theme for Jekyll'
-url: 'http://lailasprejer.com'
+url: 'https://sprejerlaila.github.io/jekyll-uno'
 baseurl: 'https://sprejerlaila.github.io/jekyll-uno'
 # google_analytics: 'UA-XXXXXX-X'
 disqus_shortname: 'laila-3'
