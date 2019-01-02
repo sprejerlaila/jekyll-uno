@@ -7,7 +7,7 @@ comments: true
 ---
 I'm one of those people who keeps *every* conversation they ever had on WhatsApp. I've never deleted a single one since 2014, when I got my first smartphone. That means, I've got in my WhatsApp history over 800k messages with my friends, coworkers, family and even old boyfriends. 
 
-As soon as I learned NLP techniques, my first target was clear: go through my entire my whatsapp history to understand how my texting has evolved over the years, how my relationships differed from one another and why not, to see what else I could learn about myself! 
+As soon as I learned NLP techniques, my first target was clear: go through my entire whatsapp history to understand how my texting has evolved over the years, if my relationships differ from one another, and why not for fun, see what else I could learn about myself! 
 
 You can find my full code and final presentation in my [GitHub repo](https://github.com/sprejerlaila/whatsapp-me)
 
@@ -21,7 +21,7 @@ For simplicity, in this first approach I decided to skip media files.
 
 ### Loading the message history
 
-WhatsApp's encrypted messaging makes it quite hard to access even our own message history. As a workaround I decided to manually export each conversation and then load it using `re` syntax.
+WhatsApp's encrypted messaging makes it quite hard to access even our own message history. As a workaround, I decided to manually export each conversation and then load it using `re` syntax.
 
 ```python
 def read_history(file):
@@ -42,7 +42,7 @@ def read_history(file):
     return history
 ```
 
-I saved all my conversations in a 'data' folder, so I list, load, and merge them into one dataframe.
+I saved all my conversations in a data folder so I could list, load, and merge them into one dataframe.
 
 ```python
 # List all files in directory
@@ -59,7 +59,7 @@ history = pd.concat(all).reset_index()
 history_clean = history[history['msg']!=' <Media omitted>']
 ```
 
-At the end I've got a pretty dataframe that looks like this:
+At the end, I've got a pretty dataframe that looks like this:
 
 ![image-20181228115119940](https://sprejerlaila.github.io/jekyll-uno/images/image-20181228115119940.jpg)
 
