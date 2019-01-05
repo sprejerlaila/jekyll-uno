@@ -13,7 +13,7 @@ You can find my full code and final presentation in my [GitHub repo](https://git
 
 In this first part, I'm going to walk through importing conversations, handling emojis, and some general analysis on messages.
 
-In part 2, I'm going to jump right into my WhatsApp topic analysis using NLP techniques.
+In [part 2](http://lailasprejer.com/2019/Analyzing-WhatsApp-messages-part-2/), I'm going to jump right into my WhatsApp topic analysis using NLP techniques.
 
 ### Disclaimer 
 
@@ -177,5 +177,5 @@ Feel free to take a look and download my [Public Tableau Dashboard](https://publ
 
 All the code used here is fully available in my [Github](https://github.com/sprejerlaila/), feel free to reach me with any questions at sprejerlaila@gmail.com or leave a comment! 
 
-Also, take a look at [Part 2](link) for some WhatsApp topic modeling!
+Also, take a look at [Part 2](http://lailasprejer.com/2019/Analyzing-WhatsApp-messages-part-2/) for some WhatsApp topic modeling!
 
