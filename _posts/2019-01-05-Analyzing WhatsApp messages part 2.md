@@ -1,6 +1,11 @@
-# Analyzing WhatsApp messages with Python, (part 2)
-
-In [part 1](link a la parte1) of this blogpost I walked through loading and cleaning my WhatsApp history, so now let's do some NLP and look at the content! 
+---
+title:  "Analyzing WhatsApp messages with Python (part 2)"
+date:   2019-01-05 15:04:23
+categories: [jekyll]
+tags: [jekyll]
+comments: true
+---
+In [part 1](http://lailasprejer.com/2018/Analyzing-whatsapp-messages-part-1/) of this blogpost I walked through loading and cleaning my WhatsApp history, so now let's do some NLP and look at the content! 
 
 In case you are not familiar with NLP, here's some basic terminology: 
 
@@ -28,7 +33,7 @@ We should take a second to think about how we are going to define the documents.
 
 When I first tried to use each message as a different document, I came across two problems: first of all, text messages are too short, so it was hard to find clear patterns in the usage of words. But second of all, I noticed that when we text, we tend to send one message broken into several lines. As a consequence, each line by itself may not make perfect sense, which makes it harder to classify it under a certain topic. For example, in this conversation with my friend, the first two lines can be grouped into one message and the second two lines into another one. 
 
-![image-20181228115129567](/Users/lailasprejer/Library/Application Support/typora-user-images/image-20181228115129567.png)
+![image-20181228115129567](https://sprejerlaila.github.io/jekyll-uno/images/image-20181228115129567.png)
 
 I solved both problems by combining messages in groups of maximum 5 messages:
 
@@ -106,7 +111,7 @@ Removing words that occur in more than 50% of the documents may look too extreme
 
 ### NMF
 
-You can find a detailed explanation of NMF [here](link), but for the purpose of this blogpost, I'll try to give an intuition of what is happening behind the scenes. What we are going to do next, is to try to find a number of *topics* such that we can express each document as a linear combination of them (for instance, we could say that a certain WhatsApp message is made of 50% love, 30% laughter and 20% good news). 
+You can find a detailed explanation of NMF [here](https://en.wikipedia.org/wiki/Non-negative_matrix_factorization), but for the purpose of this blogpost, I'll try to give an intuition of what is happening behind the scenes. What we are going to do next, is to try to find a number of *topics* such that we can express each document as a linear combination of them (for instance, we could say that a certain WhatsApp message is made of 50% love, 30% laughter and 20% good news). 
 
 But of course, the model doesn't really know what each topic is really about. As far as NMF knows, a topic is just a combination of words' weights. Then it is on us to look at its most important words and try to find what they have in common to name the topic. For example, the model may output a topic made of the words ['love','nice','sweet'] that we can easily identify as a love topic. 
 
@@ -127,7 +132,7 @@ t = np.argmax(doc_topics,axis=1)
 plt.bar(pd.Series(t).unique(),pd.Series(t).value_counts())
 ```
 
-![image-20190102164608546](/Users/lailasprejer/Library/Application Support/typora-user-images/image-20190102164608546.png)
+![image-20190102164608546](https://sprejerlaila.github.io/jekyll-uno/images/image-20190102164608546.png)
 
 It is pretty common to have one big miscellaneous topic that gathers all the messages that didn't fall under any other topic, but you probably want to avoid having over 50% of your messages labeled under it. Overall, I thought this topic distribution looked good enough! But of course, the most important part was to see how the topics turned out.
 
@@ -155,13 +160,13 @@ topics = pd.DataFrame({topic_number: range(40), words:words})
 
 These are five of the topics with their most important words:
 
-![image-20190102171133458](/Users/lailasprejer/Library/Application Support/typora-user-images/image-20190102171133458.png)
+![image-20190102171133458](https://sprejerlaila.github.io/jekyll-uno/images/image-20190102171133458.png)
 
 If you understand a little Spanish, you may recognize that topic 5 is about thanking, and topic 6 about wishing happy birthday.
 
 After looking carefully at every one I added a third column to the dataframe with the topics' names, and this is how it looks like:
 
-![image-20190102165356289](/Users/lailasprejer/Library/Application Support/typora-user-images/image-20190102165356289.png)
+![image-20190102165356289](https://sprejerlaila.github.io/jekyll-uno/images/image-20190102165356289.png)
 
 Of course, the topics are usually not 100% well defined, but overall I was pretty happy with how they turned out!
 
@@ -181,7 +186,7 @@ If you are following along and your topics don't look like you'd like them to, y
 
 ### Analysis
 
-Now I'm ready to play around and see what my messages are about! As I'm building my [tableau dashboard], I once again export the dataframe to a csv.
+Now I'm ready to play around and see what my messages are about! As I'm building my [tableau dashboard](https://public.tableau.com/profile/laila4760#!/vizhome/Emojis_1/Emojis?publish=yes), I once again export the dataframe to a csv.
 
 ```python
 # For the visualization, I dropped the messages
@@ -190,16 +195,16 @@ history_clean.drop('msg',axis=1).to_csv('model_viz.csv')
 
 One good thing about Tableau is how easily we can create pretty graphs like this:
 
-![image-20181229172324728](/Users/lailasprejer/Library/Application Support/typora-user-images/image-20181229172324728.png)
+![image-20181229172324728](https://sprejerlaila.github.io/jekyll-uno/images/image-20181229172324728.png)
 
 So good news for me, is that I mostly use WhatsApp as a tool to make plans. And even though bad news comes in second place, it is only 12% of all my WhatsApp usage so I'm not that worried about it. 
 
 Lets now see my topics in action with my family! 
 
-![image-20181229173907343](/Users/lailasprejer/Library/Application Support/typora-user-images/image-20181229173907343.png)
+![image-20181229173907343](https://sprejerlaila.github.io/jekyll-uno/images/image-20181229173907343.png)
 
 I like this a lot because it seems pretty accurate. My mom has one of the bigger 'thanks' and 'asking' percentages, and my brother the ones for 'asking' and 'work'. The Argentinian Grandchildren group was made specifically to meet our grandma so it is all about making plans, as opposed to my extended family who lives in Israel, so meeting them is quite hard.
 
-I had a lot of fun looking at my different conversations and created this [Tableau Public Dashboard](link) to easily go through my chat history. If you like the framework you can download it and fill it with your own data! 
+I had a lot of fun looking at my different conversations and created this [Tableau Public Dashboard](https://public.tableau.com/profile/laila4760#!/vizhome/Emojis_1/Emojis?publish=yes) to easily go through my chat history. If you like the framework you can download it and fill it with your own data! 
 
-All the code used here is fully available in my [Github](link), feel free to reach me with any questions at sprejerlaila@gmail.com or leave a comment! 
+All the code used here is fully available in my [Github](https://github.com/sprejerlaila/whatsapp-me), feel free to reach me with any questions at sprejerlaila@gmail.com or leave a comment! 
