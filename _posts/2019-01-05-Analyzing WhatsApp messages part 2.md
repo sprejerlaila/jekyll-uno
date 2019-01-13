@@ -7,12 +7,12 @@ comments: true
 ---
 In [part 1](http://lailasprejer.com/2018/Analyzing-whatsapp-messages-part-1/) of this blogpost I walked through loading and cleaning my WhatsApp history, so now let's do some NLP and look at the content! 
 
-In case you are not familiar with NLP, here's some basic terminology: 
+In case you are not familiar with Natural Language Processing (NLP), here's some basic terminology: 
 
 1. *Document*s: the rows/observations in the dataset. In my case, WhatsApp messages.
 2. *Tokens*: smaller units of the document (for example single words) that can be used for numerical comparison across documents.
 
-My goal here is to do some topic modeling using NMF and `sklearn` library. This post is going to be a little more technical than the previous one, but I'll do my best to walk you through it! 
+My goal here is to do some topic modeling using Non-negative Matrix Factorization (NMF) and `sklearn` library. This post is going to be a little more technical than the previous one, but I'll do my best to walk you through it! 
 
 These are (on a very high level) the steps I followed:
 
@@ -91,7 +91,7 @@ Luckily, `nltk` package has two very useful functions: `word_tokenize` takes car
 
 ### TF-IDF
 
-The next step was counting the tokens' occurrences. I used a TF-IDF approach that not only looks at how common a token is in a document, but also downweights common tokens accross all documents. Given the short length of text messages, I thought this was the best approach.
+The next step was counting the tokens' occurrences. I used a Term Frequency–Inverse Document Frequency (TF-IDF) approach that not only looks at how common a token is in a document, but also downweights common tokens accross all documents. Given the short length of text messages, I thought this was the best approach.
 
 The `TfidfVectorizer` function from `sklearn` takes care of all the hard work. It even allows you to pass some useful custom parameters:
 
