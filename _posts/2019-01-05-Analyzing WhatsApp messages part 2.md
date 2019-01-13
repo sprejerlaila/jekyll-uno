@@ -91,7 +91,7 @@ Luckily, `nltk` package has two very useful functions: `word_tokenize` takes car
 
 ### TF-IDF
 
-The next step was counting the tokens' occurrences. I used a Term Frequency–Inverse Document Frequency (TF-IDF) approach that not only looks at how common a token is in a document, but also downweights common tokens accross all documents. Given the short length of text messages, I thought this was the best approach.
+The next step was converting the tokens into numerical features. We get that number by assigning the importance of a token in a document based on the number of times it is used. The Term Frequency–Inverse Document Frequency (TF-IDF) approach not only looks at how common a token is in a document, but also downweights common tokens across all documents. Therefore, if the word frequency is high in a particular document then the weight will be higher. Conversely, if the word frequency is low in a particular document then the weight will be lower. Given the short length of text messages, I thought this was the best approach.
 
 The `TfidfVectorizer` function from `sklearn` takes care of all the hard work. It even allows you to pass some useful custom parameters:
 
