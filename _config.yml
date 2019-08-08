@@ -3,7 +3,7 @@ title: Laila Sprejer
 description: 'Welcome to my blog!'
 url: 'https://sprejerlaila.github.io/jekyll-uno'
 baseurl: 'https://sprejerlaila.github.io/jekyll-uno'
-# google_analytics: 'UA-XXXXXX-X'
+google_analytics: 'UA-145403173-1'
 disqus_shortname: 'laila-3'
 
 author:
