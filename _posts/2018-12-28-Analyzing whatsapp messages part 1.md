@@ -41,6 +41,7 @@ def read_history(file):
 
     return history
 ```
+Note: I've realized that the WhatsApp files may differ accross regions and app versions, so be sure to adjust the `re` syntax accordingly! Otherwise, you will end up with an empty dataframe. If you get stuck [this](https://www.w3schools.com/python/python_regex.asp) is a tutorial that I found useful, or you can also write me.
 
 I saved all my conversations in a data folder so I could list, load, and merge them into one dataframe.
 
