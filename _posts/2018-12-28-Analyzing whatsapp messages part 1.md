@@ -28,12 +28,12 @@ def read_history(file):
     f = open('data/{}'.format(file), 'r')
  
     # Every text message has the same format: date - sender: message. 
-    messages = re.findall('(\d+/\d+/\d+, \d+:\d+\d+) - (.*): (.*)', f.read())
+    messages = re.findall('(\d+/\d+/\d+, \d+:\d+\d+ [A-Z]*) - (.*?): (.*)', f.read()
     f.close()
 
     #Convert list to a dataframe and name the columns
     history = pd.DataFrame(messages,columns=['date','name','msg'])
-    history['date'] = pd.to_datetime(history['date'],format="%m/%d/%y, %H:%M")
+    history['date'] = pd.to_datetime(history['date'],format="%m/%d/%y, %I:%M %p")
     history['date1'] = history['date'].apply(lambda x: x.date())
 
     # file is in the format 'WhatsApp Conversation with XXX.txt'
